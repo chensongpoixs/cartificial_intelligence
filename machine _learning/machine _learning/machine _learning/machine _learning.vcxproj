@@ -71,13 +71,25 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\vsout\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(C_INCLUDE)\opencv\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(C_INCLUDE)\opencv\lib\x86\debug;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(C_INCLUDE)\opencv\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(C_INCLUDE)\opencv\lib\x86\debug;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv_calib3d400d.lib;opencv_core400d.lib;opencv_dnn400d.lib;opencv_features2d400d.lib;opencv_flann400d.lib;opencv_gapi400d.lib;opencv_highgui400d.lib;opencv_imgcodecs400d.lib;opencv_imgproc400d.lib;opencv_ml400d.lib;opencv_objdetect400d.lib;opencv_photo400d.lib;opencv_stitching400d.lib;opencv_video400d.lib;opencv_videoio400d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -113,6 +125,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
