@@ -46,8 +46,7 @@ void icard(const char * src_img, const char * dst_img)
 	cv::Mat img_idCard;
 	//获得的身份证号码图
 	cv::Mat img_idNumber;
-	//Java_org_opencv_android_Utils_nBitmapToMat2(env, type, src, (jlong)&img_src, 0);
-	//Java_org_opencv_android_Utils_nBitmapToMat2(env, type, tpl, (jlong)&img_tpl, 0);
+	
 
 	cvtColor(img_src, img_gray, cv::COLOR_BGRA2GRAY);
 	imwrite("../out/gray.png", img_gray);
@@ -143,7 +142,7 @@ void icard(const char * src_img, const char * dst_img)
 	//    img_idNumber = img_threshold(rect);
 	img_idNumber = img_idCard(rect);
 	imwrite("../out/abc0.png", img_idNumber);
-	/*jobject result = createBitmap(env, img_idNumber, config);*/
+
 
 	img_src.release();
 	img_gray.release();
