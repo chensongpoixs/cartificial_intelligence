@@ -1,0 +1,5 @@
+cmake-build-debug/*
+bin/*
+.idea/*
+.ipynb_checkpoints
+kalman_filter/.*

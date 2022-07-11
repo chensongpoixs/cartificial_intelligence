@@ -2,8 +2,12 @@
 人工智能,机器学习
 
 
+[![](https://img.shields.io/badge/zhihu-%E7%9F%A5%E4%B9%8E-blue)](https://www.zhihu.com/people/chensong-1-90)
+[![](https://img.shields.io/badge/csdn-CSDN-red)](https://blog.csdn.net/Poisx)
+
 
 项目背景 学习redis源码中布隆过滤器时, 发现redis中建立伯努利数学模型来统计pfcount的次数。因此创建该项目学习人工智能的一些知识的记录。
+
 
 ### 一, 数学知识的学习
 
