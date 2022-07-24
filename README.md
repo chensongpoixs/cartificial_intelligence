@@ -9,9 +9,9 @@
 项目背景 学习redis源码中布隆过滤器时, 发现redis中建立伯努利数学模型来统计pfcount的次数。因此创建该项目学习人工智能的一些知识的记录。
 
 
-### 一, 数学知识的学习
+## 一, 数学知识的学习
 
-#### 1, 高等数学
+### 1, 高等数学
 
 |模块|类型|链接|
 |:--:|:--:|:--:|
@@ -21,12 +21,12 @@
 |高等数学|数学知识|[4.偏导数](https://github.com/chensongpoixs/cartificial_intelligence/blob/master/mathematics/4.%E5%81%8F%E5%AF%BC%E6%95%B0.ipynb "4.偏导数")|
 
 
-#### 2, 概率论与数理统计
+### 2, 概率论与数理统计
 
 [概率论与数理统计](https://chensongpoixs.github.io/cartificial_intelligence/mathematics/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/ "概率论与数理统计")
 
 
-### 二, 机器学习 
+## 二, 机器学习 
 
 
 |算法或者理论|用到的数学知识点|
@@ -52,3 +52,18 @@
 |强化学习|数学期望, 贝尔曼方程|
 |贝叶斯网络|条件概率, 贝叶斯公式, 图|
 |VC维|Hoeffding不等式|
+
+
+
+## 三、 OpenCV 
+
+
+
+```
+cmake 添加参数
+ADD entry
+
+添加扩展库 ：opencv_contrib   中有些是要付费的或是性能非常好的
+
+OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules
+```
