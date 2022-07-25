@@ -3,3 +3,10 @@ bin/*
 .idea/*
 .ipynb_checkpoints
 kalman_filter/.*
+
+
+OpenCV/build 
+OpenCV/img
+OpenCV/opencv
+OpenCV/opencv_contrib
+OpenCV/.ipynb_checkpoints
