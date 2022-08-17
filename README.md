@@ -1,5 +1,4 @@
-# cartificial_intelligence
-人工智能,机器学习
+# AI算法基本功和AI算法进阶技能
 
 
 [![](https://img.shields.io/badge/zhihu-%E7%9F%A5%E4%B9%8E-blue)](https://www.zhihu.com/people/chensong-1-90)
