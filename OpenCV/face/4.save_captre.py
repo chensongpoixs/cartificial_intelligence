@@ -18,7 +18,7 @@ while (cap.isOpened()):
     k = cv2.waitKey(1) & 0XFF;
 
     if  k == ord('s'):
-        cv2.imwrite("./" + str(num)+"_name.jpg", Vshow);
+        cv2.imwrite("./img/" + str(num)+"_name.jpg", Vshow);
         print('success to save ' + str(num) + '_name.jpg');
         print("----------------");
         num += 1;

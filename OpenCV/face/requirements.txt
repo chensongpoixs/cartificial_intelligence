@@ -1,0 +1,7 @@
+
+#pip install opencv-python
+# pip install opencv-contrib-python
+#指定安装版本:
+#pip install opencv-contrib-python==对应的版本号
+#pip install opencv-contrib-python
+pip install opencv-contrib-python

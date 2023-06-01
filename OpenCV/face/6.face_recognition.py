@@ -10,8 +10,18 @@ import urllib
 import urllib.request
 import hashlib
 
+
+
+
+FACE_TRAN_DATA_PATH = "D:/Work/cartificial_intelligence/OpenCV/opencv/data/haarcascades/haarcascade_frontalface_default.xml";
+
+VIDEO_PATH = "C:/video/QingdaoUniversity.mp4";
+
 #加载训练数据集文件
-recogizer=cv2.face.LBPHFaceRecognizer_create()
+# 当然在运行之前有进行过pip install opencv-contrib-python，但是！一运行程序，会产生这样的报错recognizer=cv2.face.LBPHFaceRecognizer_create()
+# AttributeError: module 'cv2' has no attribute 'face' 常见的办法就是 卸载、
+
+recogizer=cv2.face.LBPHFaceRecognizer_create();
 recogizer.read('trainer/trainer.yml')
 names=[]
 warningtime = 0
@@ -54,16 +64,16 @@ def warning():
 
 #准备识别的图片
 def face_detect_demo(img):
-    gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)#转换为灰度
-    face_detector=cv2.CascadeClassifier('D:/opencv/opencv/sources/data/haarcascades/haarcascade_frontalface_alt2.xml')
-    face=face_detector.detectMultiScale(gray,1.1,5,cv2.CASCADE_SCALE_IMAGE,(100,100),(300,300))
+    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)#转换为灰度
+    face_detector=cv2.CascadeClassifier(FACE_TRAN_DATA_PATH)
+    face=face_detector.detectMultiScale(gray,1.1,5,cv2.CASCADE_SCALE_IMAGE,(2,2),(300,300))
     #face=face_detector.detectMultiScale(gray)
     for x,y,w,h in face:
         cv2.rectangle(img,(x,y),(x+w,y+h),color=(0,0,255),thickness=2)
         cv2.circle(img,center=(x+w//2,y+h//2),radius=w//2,color=(0,255,0),thickness=1)
         # 人脸识别
         ids, confidence = recogizer.predict(gray[y:y + h, x:x + w])
-        #print('标签id:',ids,'置信评分：', confidence)
+        print('标签id:',ids,'置信评分：', confidence)
         if confidence > 80:
             global warningtime
             warningtime += 1
@@ -77,7 +87,7 @@ def face_detect_demo(img):
     #print('bug:',ids)
 
 def name():
-    path = './data/jm/'
+    path = './img'
     #names = []
     imagePaths=[os.path.join(path,f) for f in os.listdir(path)]
     for imagePath in imagePaths:
@@ -85,7 +95,7 @@ def name():
        names.append(name)
 
 
-cap=cv2.VideoCapture('video.mp4')
+cap=cv2.VideoCapture(VIDEO_PATH)
 name()
 while True:
     flag,frame=cap.read()

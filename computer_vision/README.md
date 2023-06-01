@@ -4,17 +4,18 @@
 
 ## 一、计算机视觉的基础
 
-[1. 图像预处理]()
+[1. 图像预处理](一、fundamentals_computer_vision/1.image_preprocessing.md)
 
-[2. 图像特征及描述]()
+[2. 图像特征及描述](一、fundamentals_computer_vision/2.image_features_descriptions.md)
 
-[3. 未有深度学习之前]()
+[3. 未有深度学习之前](一、fundamentals_computer_vision/3.before_deep_learning.md)
 
 
 ## 二、深度学习的理论基础
 
-1. BP神经网络详解
-2. 深度学习基础
+[1. BP神经网络详解](二、theoretical_basis_deep_learning/1.fundamentals_nural_networks_deep_learning.md)
+
+[2. 深度学习基础]()
 
 ## 三、深度学习在计算机视觉中的应用
 
@@ -24,6 +25,7 @@
 4. 图像描述 ---> 迭代神经网络RNN
 5. 图像生成 ---> 生成对抗网络GAN
 
+[](computer_vision/三、application_deep_learning_computer_vision/1.convolutional_neural_network.md)
 
 # 开源库介绍
 
